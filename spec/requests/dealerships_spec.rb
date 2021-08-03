@@ -24,6 +24,11 @@ RSpec.describe "/dealerships", type: :request do
     { name: '' }
   }
 
+  before(:each) do
+    user = User.create!(email: 'test@example.com', username: 'test', password: 'f4k3p455w0rd', user_type: 'admin')
+    login_as(user, scope: :user)
+  end
+
   describe "GET /index" do
     it "renders a successful response" do
       Dealership.create! valid_attributes

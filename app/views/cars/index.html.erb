@@ -27,8 +27,8 @@
         <td><%= car.condition %></td>
         <td><%= car.stock %></td>
         <td><%= link_to 'Show', car %></td>
-        <td><%= link_to 'Edit', edit_car_path(car) %></td>
-        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_car_path(car) if can? :update, Car %></td>
+        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, Car %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Car', new_car_path %>
+<%= link_to 'New Car', new_car_path if can? :create, Car %>

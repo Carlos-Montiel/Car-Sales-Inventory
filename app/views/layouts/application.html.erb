@@ -15,7 +15,10 @@
     <p class="alert"><%= alert %></p>
     
     <% if user_signed_in? %>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+      hi <%= current_user.user_type %> <br> 
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %> <br>
+      <%= link_to 'Dealerships', dealerships_path if can? :manage, Dealership %> <br>
+      <%= link_to 'Cars', cars_path if can? :read, Car %> <br>
     <% end %>
 
     <%= yield %>

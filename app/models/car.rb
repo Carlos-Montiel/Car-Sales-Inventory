@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Car < ApplicationRecord
   belongs_to :dealership
 
@@ -5,5 +7,5 @@ class Car < ApplicationRecord
 
   has_one_attached :image
 
-  enum condition: %w[ new_cars used_cars ]
+  enum condition: %w[new_cars used_cars]
 end
