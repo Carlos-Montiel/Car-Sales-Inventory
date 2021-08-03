@@ -1,0 +1,29 @@
+one: 
+  id: 1
+  model: 'one car'
+  brand: 'one brand'
+  description: 'description'
+  price: 10000
+  condition: 'new_items'
+  stock: 20
+  dealership_id: 1
+
+two: 
+  id: 2
+  model: 'car two'
+  brand: 'one brand'
+  description: 'description'
+  price: 10000
+  condition: 'new_items'
+  stock: 20
+  dealership_id: 1
+
+three: 
+  id: 3
+  model: 'car three'
+  brand: 'one brand'
+  description: 'description'
+  price: 10000
+  condition: 'new_items'
+  stock: 20
+  dealership_id: 1

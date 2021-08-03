@@ -42,4 +42,11 @@ RSpec.describe Car, type: :model do
       expect(car.macro).to eq(:belongs_to)
     end
   end
+
+  context 'callbacks' do
+    it 'set last_updated_price field on create' do
+      car = described_class.create! valid_attributes
+      expect(car.last_updated_price).to eq(Date.today)
+    end
+  end
 end
