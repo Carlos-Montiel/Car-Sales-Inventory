@@ -35,6 +35,9 @@ gem 'rails-i18n', '~> 6.0.0'
 # define abilities 
 gem 'cancancan'
 
+# gem to make cron jobs
+gem 'whenever'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
