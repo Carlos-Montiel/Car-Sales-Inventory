@@ -32,6 +32,9 @@ gem 'devise-i18n'
 # internationalization
 gem 'rails-i18n', '~> 6.0.0'
 
+# define abilities 
+gem 'cancancan'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
